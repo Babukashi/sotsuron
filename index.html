@@ -60,34 +60,76 @@
           <!-- 使い方コンテンツ -->
           <div id="tab-usage" class="tab-content">
             <div class="usage-container">
-              <h3>スタッフ向け操作ガイド</h3>
+              <h3>取扱説明書</h3>
 
-              <div class="usage-card">
-                <div class="usage-step-title">1. お客様の言語を選択</div>
+              <!-- 前提・コンセプト -->
+              <div class="usage-card usage-intro">
+                <div class="usage-step-title">はじめに（想定シチュエーション）</div>
                 <p>
-                  画面右上のプルダウンから、お客様が希望される言語（英語・中国語・韓国語・スペイン語・フランス語）を選択します。
+                  今回のアプリは<strong>「レジのみで使用する・ハンディ端末を使用する」</strong>ことを想定して制作しています。<br />
+                  仕様上お客様にハンディ端末を触ってもらうことをイメージしていますが、ハンディ端末をお客様が触ってもいいということを前提に考えてもらえますと幸いです。<br />
+                  <span class="usage-note"
+                    >（実際はスタッフしか触れないものですが、こんな感じなら嬉しいな～という自己満で作ったアプリなので一旦忘れてください…）</span
+                  >
                 </p>
               </div>
 
+              <!-- 1. ホーム画面 -->
               <div class="usage-card">
-                <div class="usage-step-title">2. ご案内カテゴリを選択</div>
+                <div class="usage-step-title">1. ホーム画面の各機能</div>
+                <div class="usage-img-box" onclick="openImageModal('ホーム画面.png', 'ホーム画面')">
+                  <img src="ホーム画面.png" alt="ホーム画面" />
+                  <div class="zoom-hint">🔍 タップで画像を拡大</div>
+                </div>
+                <ul class="legend-list">
+                  <li><span class="badge-frame frame-red">赤枠</span>言語の変更（質問の途中でも変更可能）</li>
+                  <li><span class="badge-frame frame-green">緑枠</span>対応したい案内を選択</li>
+                  <li><span class="badge-frame frame-blue">青枠</span>対応した案内とその回答の履歴タブ</li>
+                  <li>
+                    <span class="badge-frame frame-yellow">黄枠</span
+                    >このアプリで対応していない言語や案内が来た際にすぐに開けるGoogle翻訳とchromeのボタン
+                  </li>
+                  <li><span class="badge-frame frame-orange">橙枠</span>使用方法</li>
+                </ul>
+              </div>
+
+              <!-- 2. 質問画面 -->
+              <div class="usage-card">
+                <div class="usage-step-title">2. 質問・回答選択画面</div>
+                <div class="usage-img-box" onclick="openImageModal('質問画面.png', '質問画面')">
+                  <img src="質問画面.png" alt="質問画面" />
+                  <div class="zoom-hint">🔍 タップで画像を拡大</div>
+                </div>
                 <p>
-                  「ホーム」タブから該当する案内メニューをタップし、画面をお客様に見せながら「YES /
-                  NO」などのボタンを押して進めます。
+                  対応したい内容を<strong>緑枠</strong>から選択すると、上の画面のように質問と回答選択の画面になります。<br />
+                  この画面をお客様に見せて直接ハンディを操作してもらい、コミュニケーションをとるのが主な機能になります。
                 </p>
               </div>
 
+              <!-- 3. サイズ確認 -->
               <div class="usage-card">
-                <div class="usage-step-title">3. サイズ確認の操作方法</div>
+                <div class="usage-step-title">3. サイズ確認の案内</div>
+                <div class="usage-img-box" onclick="openImageModal('サイズ確認.png', 'サイズ確認')">
+                  <img src="サイズ確認.png" alt="サイズ確認" />
+                  <div class="zoom-hint">🔍 タップで画像を拡大</div>
+                </div>
                 <p>
-                  「サイズ確認」では最初にスタッフ用画面が開きます。「靴下」または「アパレル」を選び、サイズを入力してお客様に画面をお渡しください。<br />最初の案内画面には国別のサイズ換算表が表示され、<strong>タップすると全画面で拡大・ピンチズーム</strong>ができます。
+                  サイズ確認の案内は<strong>「靴下」</strong>か<strong>「アパレル」</strong>かを選択後、サイズを入力してください。<br />
+                  <code>○○～○○cm</code> という入力の仕方でも問題ないです。
                 </p>
               </div>
 
+              <!-- 4. 履歴とプライバシー -->
               <div class="usage-card">
-                <div class="usage-step-title">4. 案内の終了・履歴・翻訳ツール</div>
+                <div class="usage-step-title">4. 分岐の仕組みと履歴について</div>
+                <div class="usage-img-box" onclick="openImageModal('履歴.png', '履歴画面')">
+                  <img src="履歴.png" alt="履歴画面" />
+                  <div class="zoom-hint">🔍 タップで画像を拡大</div>
+                </div>
                 <p>
-                  最後の画面で<strong>「OK」</strong>を押すとホームに戻り、対応内容が「履歴」タブに自動保存されます。<br />定型文にない案内が必要な場合は、右下の「Google翻訳」や「chromeを開く」をご活用ください。
+                  回答によって質問文がどんどん分岐していく形になっているので、沢山触ってどのように分岐していくのか体感してもらえると嬉しいです。<br />
+                  また回答は記録されますが、<strong>皆様のメールアドレスや名前などは一切記録されません</strong>のでご安心ください。<br />
+                  <span class="usage-note">※上の画面が履歴の画面です。</span>
                 </p>
               </div>
             </div>
@@ -119,7 +161,7 @@
     <div id="image-modal" class="image-modal">
       <button type="button" class="modal-close-btn" onclick="closeImageModal()">✕ 閉じる</button>
       <div id="modal-zoom-area" class="modal-zoom-area">
-        <img id="modal-zoom-img" src="" alt="サイズ換算表" />
+        <img id="modal-zoom-img" src="" alt="拡大画像" />
       </div>
       <div class="modal-controls">
         <button type="button" class="zoom-ctrl-btn" onclick="zoomImage(-0.5)">－</button>
