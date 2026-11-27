@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>インバウンド向け対応ツール</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>インバウンド向け <span>対応ツール</span></h1>
+        <select id="lang-select">
+          <option value="en">English (英語)</option>
+          <option value="zh">中文 (中国語)</option>
+          <option value="ko">한국어 (韓国語)</option>
+          <option value="es">Español (スペイン語)</option>
+          <option value="fr">Français (フランス語)</option>
+        </select>
+      </header>
+
+      <main id="main-content">
+        <div id="menu-view" class="view active">
+          <!-- タブメニュー -->
+          <div class="tab-menu">
+            <button class="tab-btn active" onclick="switchTab('home')">ホーム</button>
+            <button class="tab-btn" onclick="switchTab('history')">履歴</button>
+          </div>
+
+          <!-- ホーム（メニュー）コンテンツ -->
+          <div id="tab-home" class="tab-content active">
+            <p class="instruction">対応するご案内を選択してください</p>
+            <div class="menu-grid" id="menu-grid"></div>
+          </div>
+
+          <!-- 履歴コンテンツ -->
+          <div id="tab-history" class="tab-content">
+            <div class="history-header">
+              <h3>対応履歴</h3>
+              <button class="btn-clear" onclick="clearHistory()">クリア</button>
+            </div>
+            <div class="table-responsive">
+              <table class="history-table">
+                <thead>
+                  <tr>
+                    <th>日時</th>
+                    <th>カテゴリ</th>
+                    <th>質問内容</th>
+                    <th>選択</th>
+                  </tr>
+                </thead>
+                <tbody id="history-list">
+                  <!-- 履歴がJSで挿入されます -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div id="flow-view" class="view">
+          <div class="view-header">
+            <button id="back-btn" class="back-btn"><span class="back-icon">◀</span> 戻る</button>
+            <h2 id="category-title">カテゴリ名</h2>
+          </div>
+          <div id="question-container"></div>
+        </div>
+      </main>
+
+      <div class="floating-controls">
+        <a href="https://www.google.com/" target="_blank" class="float-btn chrome-btn">
+          <span class="btn-icon icon-chrome">C</span>
+          chromeを開く
+        </a>
+        <a href="https://translate.google.com/" target="_blank" class="float-btn translate-btn">
+          <span class="btn-icon icon-g">G</span>
+          Google翻訳
+        </a>
+      </div>
+    </div>
+
+    <!-- 画像拡大ズーム用モーダル -->
+    <div id="image-modal" class="image-modal">
+      <button type="button" class="modal-close-btn" onclick="closeImageModal()">✕ 閉じる</button>
+      <div id="modal-zoom-area" class="modal-zoom-area">
+        <img id="modal-zoom-img" src="" alt="靴下サイズ換算表" />
+      </div>
+      <div class="modal-controls">
+        <button type="button" class="zoom-ctrl-btn" onclick="zoomImage(-0.5)">－</button>
+        <button type="button" class="zoom-ctrl-btn" onclick="resetImageZoom()">Reset</button>
+        <button type="button" class="zoom-ctrl-btn" onclick="zoomImage(0.5)">＋</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
