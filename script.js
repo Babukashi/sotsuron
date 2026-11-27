@@ -251,6 +251,7 @@ const menuGrid = document.getElementById('menu-grid');
 const questionContainer = document.getElementById('question-container');
 const categoryTitle = document.getElementById('category-title');
 const backBtn = document.getElementById('back-btn');
+const floatingControls = document.querySelector('.floating-controls');
 
 let currentLang = 'en';
 let currentCategoryKey = null;
@@ -277,6 +278,8 @@ function startFlow(categoryKey) {
   categoryTitle.textContent = appData[categoryKey].title;
   menuView.classList.remove('active');
   flowView.classList.add('active');
+  if (floatingControls) floatingControls.style.display = 'flex';
+
   if (appData[categoryKey].isStaffInputRequired) {
     renderStaffInputScreen();
   } else {
@@ -379,6 +382,12 @@ function returnToMenu() {
   currentCategoryKey = currentNodeId = null;
   inputtedSize = '';
   selectedSizeType = 'socks';
+
+  // 現在「使い方」タブがアクティブでなければフローティングボタンを表示
+  const isUsageActive = document.getElementById('tab-usage').classList.contains('active');
+  if (floatingControls) {
+    floatingControls.style.display = isUsageActive ? 'none' : 'flex';
+  }
 }
 
 function switchTab(tabId) {
@@ -391,13 +400,17 @@ function switchTab(tabId) {
   if (tabId === 'home') {
     tabs[0].classList.add('active');
     document.getElementById('tab-home').classList.add('active');
+    if (floatingControls) floatingControls.style.display = 'flex';
   } else if (tabId === 'history') {
     tabs[1].classList.add('active');
     document.getElementById('tab-history').classList.add('active');
+    if (floatingControls) floatingControls.style.display = 'flex';
     displayHistory();
   } else if (tabId === 'usage') {
     tabs[2].classList.add('active');
     document.getElementById('tab-usage').classList.add('active');
+    // 使い方画面ではテキストと被らないようフローティングボタンを非表示
+    if (floatingControls) floatingControls.style.display = 'none';
   }
 }
 
