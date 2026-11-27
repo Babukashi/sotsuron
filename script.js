@@ -383,10 +383,8 @@ function returnToMenu() {
   inputtedSize = '';
   selectedSizeType = 'socks';
 
-  // 現在「使い方」タブがアクティブでなければフローティングボタンを表示
-  const isUsageActive = document.getElementById('tab-usage').classList.contains('active');
   if (floatingControls) {
-    floatingControls.style.display = isUsageActive ? 'none' : 'flex';
+    floatingControls.style.display = 'flex';
   }
 }
 
@@ -397,20 +395,20 @@ function switchTab(tabId) {
   tabs.forEach((tab) => tab.classList.remove('active'));
   contents.forEach((content) => content.classList.remove('active'));
 
+  if (floatingControls) {
+    floatingControls.style.display = 'flex';
+  }
+
   if (tabId === 'home') {
     tabs[0].classList.add('active');
     document.getElementById('tab-home').classList.add('active');
-    if (floatingControls) floatingControls.style.display = 'flex';
   } else if (tabId === 'history') {
     tabs[1].classList.add('active');
     document.getElementById('tab-history').classList.add('active');
-    if (floatingControls) floatingControls.style.display = 'flex';
     displayHistory();
   } else if (tabId === 'usage') {
     tabs[2].classList.add('active');
     document.getElementById('tab-usage').classList.add('active');
-    // 使い方画面ではテキストと被らないようフローティングボタンを非表示
-    if (floatingControls) floatingControls.style.display = 'none';
   }
 }
 
