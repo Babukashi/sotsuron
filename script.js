@@ -3,11 +3,11 @@ const SOCKS_CHART_IMAGE = 'socks_size_table.jpg';
 const APPAREL_CHART_IMAGE = 'apparel_size_table.jpg';
 
 const uiLabels = {
-  en: { yes: 'YES', no: 'NO', home: 'Home' },
-  zh: { yes: '是 (Yes)', no: '否 (No)', home: '回到主页' },
-  ko: { yes: '예 (Yes)', no: '아니요 (No)', home: '홈으로' },
-  es: { yes: 'SÍ (Yes)', no: 'NO', home: 'Inicio' },
-  fr: { yes: 'OUI (Yes)', no: 'NON (No)', home: 'Accueil' }
+  en: { yes: 'YES', no: 'NO', home: 'OK' },
+  zh: { yes: '是 (Yes)', no: '否 (No)', home: '好的 (OK)' },
+  ko: { yes: '예 (Yes)', no: '아니요 (No)', home: '확인 (OK)' },
+  es: { yes: 'SÍ (Yes)', no: 'NO', home: 'OK' },
+  fr: { yes: 'OUI (Yes)', no: 'NON (No)', home: "D'accord (OK)" }
 };
 
 const appData = {
@@ -395,6 +395,9 @@ function switchTab(tabId) {
     tabs[1].classList.add('active');
     document.getElementById('tab-history').classList.add('active');
     displayHistory();
+  } else if (tabId === 'usage') {
+    tabs[2].classList.add('active');
+    document.getElementById('tab-usage').classList.add('active');
   }
 }
 

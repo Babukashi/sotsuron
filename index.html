@@ -9,7 +9,7 @@
   <body>
     <div id="app">
       <header>
-        <h1>訪日外国人向け <span>対応ツール</span></h1>
+        <h1>インバウンド向け <span>対応ツール</span></h1>
         <select id="lang-select">
           <option value="en">English (英語)</option>
           <option value="zh">中文 (中国語)</option>
@@ -25,6 +25,7 @@
           <div class="tab-menu">
             <button class="tab-btn active" onclick="switchTab('home')">ホーム</button>
             <button class="tab-btn" onclick="switchTab('history')">履歴</button>
+            <button class="tab-btn" onclick="switchTab('usage')">使い方</button>
           </div>
 
           <!-- ホーム（メニュー）コンテンツ -->
@@ -55,6 +56,42 @@
               </table>
             </div>
           </div>
+
+          <!-- 使い方コンテンツ -->
+          <div id="tab-usage" class="tab-content">
+            <div class="usage-container">
+              <h3>スタッフ向け操作ガイド</h3>
+
+              <div class="usage-card">
+                <div class="usage-step-title">1. お客様の言語を選択</div>
+                <p>
+                  画面右上のプルダウンから、お客様が希望される言語（英語・中国語・韓国語・スペイン語・フランス語）を選択します。
+                </p>
+              </div>
+
+              <div class="usage-card">
+                <div class="usage-step-title">2. ご案内カテゴリを選択</div>
+                <p>
+                  「ホーム」タブから該当する案内メニューをタップし、画面をお客様に見せながら「YES /
+                  NO」などのボタンを押して進めます。
+                </p>
+              </div>
+
+              <div class="usage-card">
+                <div class="usage-step-title">3. サイズ確認の操作方法</div>
+                <p>
+                  「サイズ確認」では最初にスタッフ用画面が開きます。「靴下」または「アパレル」を選び、サイズを入力してお客様に画面をお渡しください。<br />最初の案内画面には国別のサイズ換算表が表示され、<strong>タップすると全画面で拡大・ピンチズーム</strong>ができます。
+                </p>
+              </div>
+
+              <div class="usage-card">
+                <div class="usage-step-title">4. 案内の終了・履歴・翻訳ツール</div>
+                <p>
+                  最後の画面で<strong>「OK」</strong>を押すとホームに戻り、対応内容が「履歴」タブに自動保存されます。<br />定型文にない案内が必要な場合は、右下の「Google翻訳」や「chromeを開く」をご活用ください。
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div id="flow-view" class="view">
@@ -82,7 +119,7 @@
     <div id="image-modal" class="image-modal">
       <button type="button" class="modal-close-btn" onclick="closeImageModal()">✕ 閉じる</button>
       <div id="modal-zoom-area" class="modal-zoom-area">
-        <img id="modal-zoom-img" src="" alt="靴下サイズ換算表" />
+        <img id="modal-zoom-img" src="" alt="サイズ換算表" />
       </div>
       <div class="modal-controls">
         <button type="button" class="zoom-ctrl-btn" onclick="zoomImage(-0.5)">－</button>

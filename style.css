@@ -256,7 +256,7 @@ select {
   color: var(--accent-color);
 }
 
-/* --- 靴下サイズ換算表サムネイル --- */
+/* --- 靴下・アパレルサイズ換算表サムネイル --- */
 .size-chart-wrapper {
   background: var(--surface-color);
   border-radius: 14px;
@@ -493,4 +493,29 @@ select {
   color: var(--text-sub);
   white-space: pre-wrap;
   line-height: 1.2;
+}
+
+/* --- 使い方タブ用スタイル --- */
+.usage-container h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+.usage-card {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-left: 4px solid var(--accent-color);
+}
+.usage-step-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 6px;
+}
+.usage-card p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-main);
 }
