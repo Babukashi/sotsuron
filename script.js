@@ -232,12 +232,12 @@ const appData = {
     startNode: 'end_info',
     nodes: {
       end_info: {
-        ja: 'レシートに記載されているQRコードを読み取って案内に沿ってお客様の情報を入力してください。この作業は今すぐではなく、出国するまでに行っていただければ問題ありません。',
-        en: 'Please scan the QR code printed on your receipt and follow the instructions to enter your information. You do not need to do this right now; it is fine as long as you complete it before departing the country.',
-        zh: '请扫描小票上的二维码，并按照指引输入您的个人信息。此操作无需立即完成，只要在您出境前办理即可。',
-        ko: '영수증에 기재된 QR 코드를 스캔하여 안내에 따라 고객님의 정보를 입력해 주십시오. 이 작업은 지금 당장이 아니라 출국하시기 전까지만 진행해 주시면 문제없습니다.',
-        es: 'Por favor, escanee el código QR impreso en su recibo y siga las instrucciones para ingresar su información. No es necesario hacerlo ahora mismo; no hay problema siempre que lo complete antes de salir del país.',
-        fr: "Veuillez scanner le code QR imprimé sur votre reçu et suivre les instructions pour saisir vos informations. Il n'est pas nécessaire de le faire tout de suite ; cela ne pose aucun problème tant que vous le faites avant de quitter le pays.",
+        ja: '手続きについてはお渡しするチラシに記載されています。確認の上レシートに記載されているQRコードを読み取って案内に沿ってお客様の情報を入力してください。この作業は今すぐではなく、出国するまでに行っていただければ問題ありません。',
+        en: 'The procedure is written on the flyer we will hand you. After checking it, please scan the QR code printed on your receipt and follow the instructions to enter your information. You do not need to do this right now; it is fine as long as you complete it before departing the country.',
+        zh: '办理手续的说明印在我们将交给您的传单上。请确认后扫描小票上的二维码，并按照指引输入您的个人信息。此操作无需立即完成，只要在您出境前办理即可。',
+        ko: '절차에 대해서는 전달해 드리는 안내문에 기재되어 있습니다. 확인하신 후 영수증에 기재된 QR 코드를 스캔하여 안내에 따라 고객님의 정보를 입력해 주십시오. 이 작업은 지금 당장이 아니라 출국하시기 전까지만 진행해 주시면 문제없습니다.',
+        es: 'El procedimiento está escrito en el folleto que le entregaremos. Después de revisarlo, escanee el código QR impreso en su recibo y siga las instrucciones para ingresar su información. No es necesario hacerlo ahora mismo; no hay problema siempre que lo complete antes de salir del país.',
+        fr: "La procédure est indiquée sur le dépliant que nous allons vous remettre. Après l'avoir consulté, veuillez scanner le code QR imprimé sur votre reçu et suivre les instructions pour saisir vos informations. Il n'est pas nécessaire de le faire tout de suite ; cela ne pose aucun problème tant que vous le faites avant de quitter le pays.",
         isEnd: true
       }
     }
